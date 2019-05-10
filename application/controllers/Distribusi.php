@@ -17,6 +17,7 @@ class Distribusi extends CI_Controller {
     $this->load->view('distribusi/template/header', $data);
 		$this->load->view('distribusi/index_distribusi');
     $this->load->view('distribusi/template/footer');
+    // adaw
 	}
 
   public function add(){
