@@ -29,6 +29,38 @@ CREATE TABLE karyawan (
     cv varchar(50) NOT NULL,
     PRIMARY KEY(id)
 );
+
+CREATE TABLE kritik (
+    id_kritik int(11) NOT NULL AUTO_INCREMENT,
+    nama varchar(50) NOT NULL,
+    email varchar(200) NOT NULL,
+    pesan varchar(2000) NOT NULL,
+    tanggal_upload date NOT NULL,
+    PRIMARY KEY(id_kritik)
+);
+
+CREATE TABLE pengiriman (
+    kode_pengiriman int(10) NOT NULL AUTO_INCREMENT,
+    nama_penerima varchar(50) NOT NULL,
+    alamat_penerima text NOT NULL,
+    telepon_penerima text NOT NULL,
+    nama_pemesan varchar(25) NOT NULL,
+    pemesanan varchar(10) NOT NULL,
+    kurir varchar(25) NOT NULL,
+    status varchar(20) NOT NULL,
+    tanggal_kirim date DEFAULT NULL,
+    PRIMARY KEY(kode_pengiriman)
+);
+
+CREATE TABLE pesan (
+    id_pesanan int(11) NOT NULL AUTO_INCREMENT,
+    id_barang int(11) NOT NULL,
+    id_user int(11) NOT NULL,
+    jml_barang int(11) NOT NULL,
+    harga int(11) NOT NULL,
+    alamat varchar(50) NOT NULL,
+    PRIMARY KEY(id_pesanan)
+);
  ```
  ----
 ## Troubleshoot
