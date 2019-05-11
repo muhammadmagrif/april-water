@@ -32,7 +32,7 @@
 
           <p>
             We could not find the page you were looking for.
-            Meanwhile, you may <a href="<?php echo base_url()?>index.php/main_controller/dashboard">return to dashboard</a> or try using the search form.
+            Meanwhile, you may <a href="<?php echo base_url()?>transaksi/dashboard">return to dashboard</a> or try using the search form.
           </p>
 
           <form class="search-form">

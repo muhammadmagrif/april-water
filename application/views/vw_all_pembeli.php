@@ -31,7 +31,7 @@
                   <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
               </div>
               <div class="modal-body">
-                  <form action="<?php echo base_url('index.php/main_controller/update_pembeli') ?>" class="form-horizontal" method="post">
+                  <form action="<?php echo base_url('transaksi/update_pembeli') ?>" class="form-horizontal" method="post">
                       <div class="form-body">
                           <div class="row">
                               <input type="hidden" name="id_user" value="<?php echo $key->id_user; ?>">
@@ -137,7 +137,7 @@
             <td>
               <div class="row">
                 <a href="?id=<?php echo $key->id_user; ?>" type="button" class="btn btn-warning"><i class="fa fa-edit"></i></a> &nbsp
-                <a href="<?php echo base_url('index.php/main_controller/delete_pembeli/'); echo $key->id_user; ?>" type="button" class="btn btn-danger" alt="default"><i class="fa fa-trash"></i></a>
+                <a href="<?php echo base_url('transaksi/delete_pembeli/'); echo $key->id_user; ?>" type="button" class="btn btn-danger" alt="default"><i class="fa fa-trash"></i></a>
               </div>
             </td>
           </tr>
@@ -164,7 +164,7 @@
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
             </div>
             <div class="modal-body">
-                <form action="<?php echo base_url('index.php/main_controller/create_pembeli') ?>" class="form-horizontal" method="post">
+                <form action="<?php echo base_url('transaksi/create_pembeli') ?>" class="form-horizontal" method="post">
                     <div class="form-body">
                         <!-- <h3 class="box-title">Data Aset Inventaris</h3>
                         <hr class="m-t-0 m-b-40"> -->
