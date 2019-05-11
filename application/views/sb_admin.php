@@ -23,10 +23,10 @@ Admin
       <h4 class="panel-title">
         <?php
           if ($main_content == 'vw_dashboard_home'){
-            ?><a class="active" href="<?php echo base_url()?>index.php/main_controller/dashboard"><?php
+            ?><a class="active" href="<?php echo base_url()?>transaksi/dashboard"><?php
           }
           else{
-            ?><a class="" href="<?php echo base_url()?>index.php/main_controller/dashboard"><?php
+            ?><a class="" href="<?php echo base_url()?>transaksi/dashboard"><?php
           }
         ?>
           <i class="fas fa-tachometer-alt"></i><span>Panel Kendali</span>
@@ -44,10 +44,10 @@ Admin
       <h4 class="panel-title">
         <?php
           if ($main_content == 'view_all_barang'){
-            ?><a class="active" href="<?php echo base_url()?>index.php/main_controller/view_all_barang"><?php
+            ?><a class="active" href="<?php echo base_url()?>transaksi/view_all_barang"><?php
           }
           else{
-            ?><a class="" href="<?php echo base_url()?>index.php/main_controller/view_all_barang"><?php
+            ?><a class="" href="<?php echo base_url()?>transaksi/view_all_barang"><?php
           }
         ?>
           <i class="fas fa-box"></i><span>Barang</span>
@@ -82,9 +82,9 @@ Admin
     ?>
 
      <ul class="list-group">
-        <a href="<?php echo base_url()?>index.php/main_controller/view_all_trx/1"><li class="list-group-item">Semua Transaksi</a></li>
-        <a href="<?php echo base_url()?>index.php/main_controller/view_all_trx/2"><li class="list-group-item">Lunas</a></li>
-        <a href="<?php echo base_url()?>index.php/main_controller/view_all_trx/3"><li class="list-group-item">Belum Lunas</a></li>
+        <a href="<?php echo base_url()?>transaksi/view_all_trx/1"><li class="list-group-item">Semua Transaksi</a></li>
+        <a href="<?php echo base_url()?>transaksi/view_all_trx/2"><li class="list-group-item">Lunas</a></li>
+        <a href="<?php echo base_url()?>transaksi/view_all_trx/3"><li class="list-group-item">Belum Lunas</a></li>
       </ul>
     </div>
   </div>
@@ -96,10 +96,10 @@ Admin
       <h4 class="panel-title">
         <?php
           if ($main_content == 'view_all_pembeli'){
-            ?><a class="active" href="<?php echo base_url()?>index.php/main_controller/view_all_pembeli"><?php
+            ?><a class="active" href="<?php echo base_url()?>transaksi/view_all_pembeli"><?php
           }
           else{
-            ?><a class="" href="<?php echo base_url()?>index.php/main_controller/view_all_pembeli"><?php
+            ?><a class="" href="<?php echo base_url()?>transaksi/view_all_pembeli"><?php
           }
         ?>
           <i class="far fa-user"></i><span>Pembeli</span>
