@@ -1,7 +1,7 @@
 <?php
 class Admin extends CI_Model{
  
-	public $table = 'registrationdata';
+	public $table = 'karyawan';
 
 	public function show()
 	{

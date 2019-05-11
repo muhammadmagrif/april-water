@@ -82,7 +82,7 @@ class Home_regist extends CI_Controller {
 				'ijazah' => $ijazah,
 				'cv' => $cv
 				);
-			$this->db->insert('registrationdata',$data);
+			$this->db->insert('karyawan',$data);
 			redirect('home_regist/suces');
 		}
 	}
