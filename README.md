@@ -16,6 +16,18 @@ create table session (
     timestamp int(100) not null,
     data blob not null
 );
+
+CREATE TABLE karyawan (
+    id int(11) NOT NULL PRIMARY AUTO_INCREMENT,
+    nama varchar(30) NOT NULL,
+    tanggal_lahir date NOT NULL,
+    alamat varchar(50) NOT NULL,
+    email varchar(50) NOT NULL,
+    nomer text NOT NULL,
+    job varchar(20) NOT NULL,
+    ijazah varchar(50) NOT NULL,
+    cv varchar(50) NOT NULL
+)
  ```
  ----
 ## Troubleshoot
