@@ -1,12 +1,12 @@
 <?php
-	class Main_controller extends CI_Controller {
+	class Transaksi extends CI_Controller {
 		public function __construct()
 	  {
 	    parent::__construct();
 	    $this->load->model('main_model');
 	  }
 		public function index(){
-				redirect(base_url('index.php/main_controller/dashboard'));
+				redirect('transaksi/dashboard');
 		}
 		public function error_page(){
 				$data['main_sidebar'] = 'sb_admin';
@@ -30,7 +30,7 @@
 			}else{
 				$this->session->set_flashdata('danger', 'Data barang gagal ditambahkan');
 			}
-			redirect('main_controller/view_all_barang');
+			redirect('transaksi/view_all_barang');
 		}
 		public function view_all_barang(){
 			$data['main_sidebar'] = 'sb_admin';
@@ -46,7 +46,7 @@
 			}else{
 				$this->session->set_flashdata('danger', 'Data barang gagal diubah');
 			}
-			redirect('main_controller/view_all_barang');
+			redirect('transaksi/view_all_barang');
 		}
 		public function delete_barang($id){
 			$query = $this->main_model->deleteBarang($id);
@@ -55,7 +55,7 @@
 			}else{
 				$this->session->set_flashdata('danger', 'Data barang gagal dihapus');
 			}
-			redirect('main_controller/view_all_barang');
+			redirect('transaksi/view_all_barang');
 		}
 		public function get_satu_barang($id){
 			$sukon = $this->main_model->getSatuBarang($id);
@@ -72,7 +72,7 @@
 			}else{
 				$this->session->set_flashdata('danger', 'Data pembeli gagal ditambahkan');
 			}
-			redirect('main_controller/view_all_pembeli');
+			redirect('transaksi/view_all_pembeli');
 		}
 		public function update_pembeli(){
 			$data = $this->input->post(null,TRUE);
@@ -82,7 +82,7 @@
 			}else{
 				$this->session->set_flashdata('danger', 'Data pembeli gagal diubah');
 			}
-			redirect('main_controller/view_all_pembeli');
+			redirect('transaksi/view_all_pembeli');
 		}
 		public function view_all_pembeli(){
 			$data['main_sidebar'] = 'sb_admin';
@@ -97,7 +97,7 @@
 			}else{
 				$this->session->set_flashdata('danger', 'Data pembeli gagal dihapus');
 			}
-			redirect('main_controller/view_all_pembeli');
+			redirect('transaksi/view_all_pembeli');
 		}
 		public function get_satu_Pembeli($id){
 			$sukon = $this->main_model->getSatuPembeli($id);
@@ -114,7 +114,7 @@
 			}else{
 				$this->session->set_flashdata('danger', 'Data transaksi gagal ditambahkan');
 			}
-			redirect('main_controller/view_all_trx/1');
+			redirect('transaksi/view_all_trx/1');
 		}
 		public function view_all_trx($id){
 				$data['stat'] = $id;
@@ -133,7 +133,7 @@
 			}else{
 				$this->session->set_flashdata('danger', 'Data transaksi gagal diubah');
 			}
-			redirect('main_controller/view_all_trx/1');
+			redirect('transaksi/view_all_trx/1');
 		}
 		public function delete_transaksi($id){
 			$query = $this->main_model->deleteTransaki($id);
@@ -142,7 +142,7 @@
 			}else{
 				$this->session->set_flashdata('danger', 'Data Transaksi gagal dihapus');
 			}
-			redirect('main_controller/view_all_trx/1');
+			redirect('transaksi/view_all_trx/1');
 		}
 		public function get_satu_trx($id){
 			$sukon = $this->main_model->getSatuTrx($id);
