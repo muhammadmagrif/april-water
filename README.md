@@ -88,6 +88,26 @@ CREATE TABLE tb_user (
     email varchar(100) NOT NULL,
     PRIMARY KEY(id_user)
 );
+
+CREATE TABLE customer(
+ nama varchar(50),
+ ktp varchar(30) NOT NULL,
+ PRIMARY KEY(ktp)
+);
+
+CREATE TABLE pesan(
+ ktp varchar(30),
+ id_pesanan int NOT NULL AUTO_INCREMENT,
+ alamat varchar(100),
+ noHp varchar(15),
+ jml int,
+ jenis varchar(50),
+ metode_pembayaran varchar(20),
+ tanggal_pemesanan date,
+ status_pemesanan varchar(20),
+ PRIMARY KEY(id_pesanan)
+);
+
  ```
  ----
 ## Troubleshoot
