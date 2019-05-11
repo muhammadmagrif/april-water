@@ -18,7 +18,7 @@ create table session (
 );
 
 CREATE TABLE karyawan (
-    id int(11) NOT NULL PRIMARY AUTO_INCREMENT,
+    id int(11) NOT NULL AUTO_INCREMENT,
     nama varchar(30) NOT NULL,
     tanggal_lahir date NOT NULL,
     alamat varchar(50) NOT NULL,
@@ -26,8 +26,9 @@ CREATE TABLE karyawan (
     nomer text NOT NULL,
     job varchar(20) NOT NULL,
     ijazah varchar(50) NOT NULL,
-    cv varchar(50) NOT NULL
-)
+    cv varchar(50) NOT NULL,
+    PRIMARY KEY(id)
+);
  ```
  ----
 ## Troubleshoot
