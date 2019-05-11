@@ -61,6 +61,33 @@ CREATE TABLE pesan (
     alamat varchar(50) NOT NULL,
     PRIMARY KEY(id_pesanan)
 );
+
+CREATE TABLE tb_barang (
+    id_barang int(11) NOT NULL,
+    nama_barang varchar(20) NOT NULL,
+    harga int(11) NOT NULL,
+    PRIMARY KEY(id_barang)
+);
+
+CREATE TABLE tb_transaksi (
+    id_trx int(10) NOT NULL AUTO_INCREMENT,
+    tanggal_transaksi date NOT NULL,
+    id_user varchar(100) NOT NULL,
+    id_barang varchar(100) NOT NULL,
+    total_barang int(10) NOT NULL,
+    total_harga int(10) NOT NULL,
+    status int(1) NOT NULL COMMENT '2=lunas, 3=belum',
+    PRIMARY KEY(id_trx)
+);
+
+CREATE TABLE tb_user (
+    id_user int(100) NOT NULL AUTO_INCREMENT,
+    nama_user varchar(100) NOT NULL,
+    username varchar(100) NOT NULL,
+    password varchar(100) NOT NULL,
+    email varchar(100) NOT NULL,
+    PRIMARY KEY(id_user)
+);
  ```
  ----
 ## Troubleshoot
