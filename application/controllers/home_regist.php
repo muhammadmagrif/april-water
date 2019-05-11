@@ -11,8 +11,9 @@ class Home_regist extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('regist');
-
+		$this->load->view('header');
+		$this->load->view('content/regist');
+		$this->load->view('footer');
 	}
 
 	public function bukafile()
@@ -24,19 +25,23 @@ class Home_regist extends CI_Controller {
                 $no++;
                 $judul = $reg->ijazah;
         }
-		redirect('http://localhost/sisfo_03/uploadedFile/');
+		redirect('uploadedFile/');
 	}
 
 	public function suces()
 	{
-		$this->load->view('success_regist');
+		$this->load->view('header');
+		$this->load->view('content/success_regist');
+		$this->load->view('footer');
 	}
 
 	public function admin()
 	{
 		$this->load->model('Admin');
 		$data['data'] = $this->Admin->show();
+		$this->load->view('header');
 		$this->load->view('Admin/home',$data);
+		$this->load->view('footer');
 	}
 
 	public function success()
@@ -61,7 +66,7 @@ class Home_regist extends CI_Controller {
         	);
 		if (! $this->upload->do_upload('file') && ! $this->upload->do_upload('file2') ){
 			echo "Data yang dimasukan salah <br>";
-			echo "<a href='http://localhost/sisfo_03/'>Kembali</a>";
+			echo "<a href='"+base_url()+"'>Kembali</a>";
 		}else{
 			$nama = $this->input->post('nama');
 			$tanggal = $this->input->post('ttl');
